@@ -25,6 +25,13 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -57,6 +64,24 @@ body {
   height: 3px;
   background: linear-gradient(135deg, #925e07, #d4a017);
   margin: 0 auto 1.5rem;
+}
+
+/* Product card CTA button hover */
+.product-card-cta {
+  display: block;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.625rem 0;
+  border-radius: 4px;
+  border: 1.5px solid #925e07;
+  color: #925e07;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.product-card-cta:hover {
+  background-color: #925e07;
+  color: white;
 }
 
 /* Hover card */

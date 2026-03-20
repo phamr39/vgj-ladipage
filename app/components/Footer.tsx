@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 const policyLinks = [
   { label: "Dịch vụ khách hàng", href: "#" },
   { label: "Chính sách Bán hàng", href: "#" },
@@ -10,6 +12,17 @@ const policyLinks = [
 ];
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [newsletterSent, setNewsletterSent] = useState(false);
+
+  function handleNewsletter(e: React.FormEvent) {
+    e.preventDefault();
+    if (!email) return;
+    // TODO: integrate with email service (e.g. Mailchimp, Brevo)
+    setNewsletterSent(true);
+    setEmail("");
+  }
+
   return (
     <footer style={{ background: "#1f2129", color: "white" }}>
       {/* Main footer */}
@@ -88,23 +101,27 @@ export default function Footer() {
             <p className="text-gray-400 text-sm mb-4">
               Để lại email và chúng tôi sẽ gửi bộ catalogue sản phẩm mới nhất.
             </p>
-            <form
-              className="flex gap-2"
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <input
-                type="email"
-                placeholder="Email của bạn"
-                className="flex-1 px-3 py-2 text-sm rounded-sm bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:border-[#d4a017]"
-              />
-              <button
-                type="submit"
-                className="px-4 py-2 text-sm font-semibold rounded-sm text-white flex-shrink-0"
-                style={{ background: "linear-gradient(135deg, #925e07, #d4a017)" }}
-              >
-                Gửi
-              </button>
-            </form>
+            {newsletterSent ? (
+              <p className="text-[#d4a017] text-sm">Cảm ơn! Chúng tôi sẽ liên hệ sớm.</p>
+            ) : (
+              <form className="flex gap-2" onSubmit={handleNewsletter}>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Email của bạn"
+                  required
+                  className="flex-1 px-3 py-2 text-sm rounded-sm bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:border-[#d4a017]"
+                />
+                <button
+                  type="submit"
+                  className="px-4 py-2 text-sm font-semibold rounded-sm text-white flex-shrink-0"
+                  style={{ background: "linear-gradient(135deg, #925e07, #d4a017)" }}
+                >
+                  Gửi
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>

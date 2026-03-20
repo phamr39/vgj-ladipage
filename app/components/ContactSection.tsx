@@ -150,7 +150,7 @@ export default function ContactSection() {
                   />
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
                       Email <span className="text-red-500">*</span>
@@ -202,7 +202,12 @@ export default function ContactSection() {
 
                 <p className="text-xs text-gray-400 text-center">
                   Thông tin của bạn được bảo mật theo{" "}
-                  <a href="#" className="underline hover:text-[#925e07]">
+                  <a
+                    href="https://vietinbankgold.vn/chinh-sach-bao-mat"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-[#925e07]"
+                  >
                     Chính sách bảo mật
                   </a>{" "}
                   của VietinBank Gold &amp; Jewellery.

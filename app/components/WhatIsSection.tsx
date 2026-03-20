@@ -8,11 +8,11 @@ export default function WhatIsSection() {
           {/* Image */}
           <div className="relative h-80 md:h-[450px] rounded-lg overflow-hidden shadow-xl order-2 md:order-1">
             <Image
-              src="https://w.ladicdn.com/s500x450/5a9eacac4912a4d655abf852/imgmodel9af85764-20250924064800-cv1wf.png"
+              src="/images/what-is-product.png"
               alt="Quà tặng vàng doanh nghiệp VietinBank Gold"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
-              unoptimized
             />
             {/* Gold border accent */}
             <div

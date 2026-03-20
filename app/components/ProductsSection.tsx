@@ -10,8 +10,8 @@ const categories = [
     badgeColor: "#925e07",
     desc: "Mỗi sản phẩm là một tác phẩm nghệ thuật duy nhất — thiết kế và chế tác hoàn toàn theo yêu cầu riêng của doanh nghiệp bạn.",
     images: [
-      "https://w.ladicdn.com/s550x500/5a9eacac4912a4d655abf852/hinh-anh-19-9-25-luc-1626-20250924064959-lyipt.jpeg",
-      "https://w.ladicdn.com/s550x450/5a9eacac4912a4d655abf852/hinh-anh-19-9-25-luc-1626-1-20250924064959-noxft.jpeg",
+      "/images/product-doc-ban-1.jpg",
+      "/images/product-doc-ban-2.jpg",
     ],
     features: ["Thiết kế 1-of-1", "Logo & thông điệp riêng", "Chứng nhận độc bản"],
   },
@@ -21,8 +21,8 @@ const categories = [
     badgeColor: "#d4a017",
     desc: "Sản phẩm được thiết kế theo phong cách và màu sắc thương hiệu doanh nghiệp — lý tưởng cho quà tặng hội nghị, đối tác số lượng lớn.",
     images: [
-      "https://w.ladicdn.com/s550x500/5a9eacac4912a4d655abf852/hinh-anh-19-9-25-luc-1626-2-20250924064959--yc5u.jpeg",
-      "https://w.ladicdn.com/s700x550/5a9eacac4912a4d655abf852/hinh-anh-19-9-25-luc-1715-1-20250924064959-_jwl_.jpeg",
+      "/images/product-thiet-ke-1.jpg",
+      "/images/product-thiet-ke-2.jpg",
     ],
     features: ["Thiết kế theo brand", "Số lượng linh hoạt", "Bao bì cao cấp"],
   },
@@ -32,18 +32,18 @@ const categories = [
     badgeColor: "#b87a1a",
     desc: "Vàng miếng, vàng thỏi khắc logo và thông điệp — quà tặng vừa có giá trị thẩm mỹ vừa là tài sản bảo toàn theo thời gian.",
     images: [
-      "https://w.ladicdn.com/s500x500/5a9eacac4912a4d655abf852/hinh-anh-2-10-25-luc-0854-20251002015734-j8ina.jpeg",
-      "https://w.ladicdn.com/s500x550/5a9eacac4912a4d655abf852/hinh-anh-2-10-25-luc-0855-2-20251002015733-pvxbf.jpeg",
+      "/images/product-vang-1.jpg",
+      "/images/product-vang-2.jpg",
     ],
     features: ["Vàng SJC chuẩn", "Khắc laser chính xác", "Chứng nhận giá trị"],
   },
 ];
 
 const galleryImages = [
-  "https://w.ladicdn.com/s900x700/5a9eacac4912a4d655abf852/hinh-anh-19-9-25-luc-1731-20250924064931-eoffu.jpeg",
-  "https://w.ladicdn.com/s700x550/5a9eacac4912a4d655abf852/hinh-anh-19-9-25-luc-1715-20250924064959-hdkap.jpeg",
-  "https://w.ladicdn.com/s550x500/5a9eacac4912a4d655abf852/hinh-anh-2-10-25-luc-0854-1-20251002015734-d1qyj.jpeg",
-  "https://w.ladicdn.com/s450x450/5a9eacac4912a4d655abf852/hinh-anh-2-10-25-luc-0855-20251002015733-cddo-.jpeg",
+  "/images/gallery-1.jpg",
+  "/images/gallery-2.jpg",
+  "/images/gallery-3.jpg",
+  "/images/gallery-4.jpg",
 ];
 
 function StarRating({ count = 5 }: { count?: number }) {
@@ -90,8 +90,8 @@ export default function ProductsSection() {
                       src={img}
                       alt={cat.title}
                       fill
+                      sizes="(max-width: 768px) 50vw, 17vw"
                       className="object-cover hover:scale-105 transition-transform duration-500"
-                      unoptimized
                     />
                   </div>
                 ))}
@@ -128,22 +128,7 @@ export default function ProductsSection() {
                   ))}
                 </ul>
 
-                <a
-                  href="#contact"
-                  className="block text-center text-sm font-semibold py-2.5 rounded transition-colors"
-                  style={{
-                    border: "1.5px solid #925e07",
-                    color: "#925e07",
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.background = "#925e07";
-                    (e.currentTarget as HTMLAnchorElement).style.color = "white";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
-                    (e.currentTarget as HTMLAnchorElement).style.color = "#925e07";
-                  }}
-                >
+                <a href="#contact" className="product-card-cta">
                   Xem chi tiết &amp; đặt hàng
                 </a>
               </div>
@@ -166,8 +151,8 @@ export default function ProductsSection() {
                   src={img}
                   alt={`Sản phẩm VietinBank Gold ${i + 1}`}
                   fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  unoptimized
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
               </div>

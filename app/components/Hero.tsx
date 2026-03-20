@@ -9,12 +9,12 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="https://w.ladicdn.com/s1050x600/5a9eacac4912a4d655abf852/541982699_122096365659007380_1615852787055286316_n-20250926025000-ndwjv.jpg"
+          src="/images/hero-banner.jpg"
           alt="VietinBank Gold & Jewellery - Quà tặng doanh nghiệp"
           fill
+          sizes="100vw"
           className="object-cover object-center"
           priority
-          unoptimized
         />
         {/* Dark overlay */}
         <div className="absolute inset-0" style={{ background: "rgba(31,33,41,0.65)" }} />

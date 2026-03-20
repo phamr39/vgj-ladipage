@@ -75,11 +75,11 @@ export default function AboutSection() {
           {/* Image */}
           <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-2xl">
             <Image
-              src="https://w.ladicdn.com/s1050x700/5a9eacac4912a4d655abf852/thiet-ke-chua-co-ten-20250924073724-gldkb.png"
+              src="/images/about-brand.png"
               alt="VietinBank Gold & Jewellery - Chế tác vàng cao cấp"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
-              unoptimized
             />
             {/* Gold frame overlay */}
             <div

@@ -61,13 +61,12 @@ export default function ProcessSection() {
         {/* Desktop: timeline infographic image */}
         <div className="hidden md:block mb-12 relative">
           <Image
-            src="https://w.ladicdn.com/s600x500/5a9eacac4912a4d655abf852/timeline-20250926023833-qxcwn.png"
+            src="/images/process-timeline.png"
             alt="Quy trình đặt hàng VietinBank Gold"
             width={900}
             height={400}
             className="mx-auto rounded-lg shadow-md"
-            style={{ maxWidth: "100%", height: "auto" }}
-            unoptimized
+            style={{ maxWidth: "100%", width: "100%", height: "auto" }}
           />
         </div>
 
