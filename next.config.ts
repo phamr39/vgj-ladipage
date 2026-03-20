@@ -1,7 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "w.ladicdn.com",
+      },
+      {
+        protocol: "https",
+        hostname: "static.ladipage.net",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
